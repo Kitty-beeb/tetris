@@ -14,6 +14,20 @@ const colors = [
     "yellow",
 ];
 
+// Tetrispalojen värikkäät kehut Delille
+const compliments = [
+    "Del, olet mahtava!",
+    "Hienoa, Del! Olet loistava!",
+    "Del, olet aivan upea!",
+    "Jatka samaan malliin, Del!",
+    "Del, tuot valoa maailmaan!",
+    "Del, olet pysäyttämätön!",
+    "Sinä olet tähti, Del!",
+    "Del, olet nerokas!",
+    "Olet inspiroiva, Del!",
+    "Del, olet paras!"
+];
+
 // Luo pelialue
 const arena = createMatrix(12, 20);
 
@@ -147,6 +161,7 @@ function playerDrop() {
         merge(arena, player);
         playerReset();
         arenaSweep();
+        giveCompliment();
     }
     dropCounter = 0;
 }
@@ -172,6 +187,12 @@ function arenaSweep() {
         player.score += 10;
         updateScore();
     }
+}
+
+// Anna kehu Delille
+function giveCompliment() {
+    const compliment = compliments[Math.floor(Math.random() * compliments.length)];
+    document.getElementById("compliment").innerText = compliment;
 }
 
 // Päivitä pisteet
