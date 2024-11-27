@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#tetris {
+    border: 2px solid #fff;
+    background-color: #000;
+}
+
+#compliment {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffcc00;
+    font-weight: bold;
+}
